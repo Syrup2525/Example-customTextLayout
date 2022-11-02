@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="customLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgE-cs-gvT">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HGQ-gb-BDd">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="492"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9v9-ML-foC" userLabel="Normal Text Field View">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="66"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBS-hr-zr6" customClass="CommonTextField" customModule="customLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="18" width="354" height="48"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="gew-UI-nJF"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="x 버튼"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="mBS-hr-zr6" firstAttribute="leading" secondItem="9v9-ML-foC" secondAttribute="leading" constant="18" id="FEV-PF-jNO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mBS-hr-zr6" secondAttribute="bottom" id="PxB-Ez-9XR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mBS-hr-zr6" secondAttribute="trailing" constant="18" id="dDM-2r-2Pj"/>
+                                                    <constraint firstItem="mBS-hr-zr6" firstAttribute="top" secondItem="9v9-ML-foC" secondAttribute="top" constant="18" id="e97-qf-aI0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTm-qK-2eI" userLabel="Count Text Field  View">
+                                                <rect key="frame" x="0.0" y="66" width="390" height="66"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDw-Jh-KuI" customClass="CommonTextField" customModule="customLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="18" width="354" height="48"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="n0m-IZ-8uH"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textMaxCount">
+                                                                <integer key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="x 버튼, 숫자카운트"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="eDw-Jh-KuI" secondAttribute="trailing" constant="18" id="0nh-3r-erJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eDw-Jh-KuI" secondAttribute="bottom" id="S72-8W-ijk"/>
+                                                    <constraint firstItem="eDw-Jh-KuI" firstAttribute="leading" secondItem="iTm-qK-2eI" secondAttribute="leading" constant="18" id="eKM-ff-a9T"/>
+                                                    <constraint firstItem="eDw-Jh-KuI" firstAttribute="top" secondItem="iTm-qK-2eI" secondAttribute="top" constant="18" id="jph-Cp-iAX"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKi-fC-cIr" userLabel="Submit Text Field View">
+                                                <rect key="frame" x="0.0" y="132" width="390" height="66"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pg5-PX-yFc" customClass="CommonTextField" customModule="customLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="18" width="354" height="48"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="6OQ-To-MXJ"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="submitImage" value="magnifyingglass" catalog="system"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="x 버튼, submit 버튼"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="pg5-PX-yFc" secondAttribute="trailing" constant="18" id="1Bx-AY-SQG"/>
+                                                    <constraint firstItem="pg5-PX-yFc" firstAttribute="leading" secondItem="ZKi-fC-cIr" secondAttribute="leading" constant="18" id="K8s-hb-ZWz"/>
+                                                    <constraint firstItem="pg5-PX-yFc" firstAttribute="top" secondItem="ZKi-fC-cIr" secondAttribute="top" constant="18" id="eYU-iz-Jmu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pg5-PX-yFc" secondAttribute="bottom" id="sqr-MD-C91"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thn-8I-jJ0" userLabel="All Text Field View">
+                                                <rect key="frame" x="0.0" y="198" width="390" height="66"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8o1-zd-HM8" customClass="CommonTextField" customModule="customLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="18" width="354" height="48"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="aO8-IZ-J1s"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="submitImage" value="magnifyingglass" catalog="system"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textMaxCount">
+                                                                <integer key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="x 버튼, 숫자카운트,  submit 버튼"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="8o1-zd-HM8" secondAttribute="bottom" id="5Hy-Yg-JeZ"/>
+                                                    <constraint firstItem="8o1-zd-HM8" firstAttribute="leading" secondItem="Thn-8I-jJ0" secondAttribute="leading" constant="18" id="X1c-fz-EBh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8o1-zd-HM8" secondAttribute="trailing" constant="18" id="bCa-GG-p2E"/>
+                                                    <constraint firstItem="8o1-zd-HM8" firstAttribute="top" secondItem="Thn-8I-jJ0" secondAttribute="top" constant="18" id="eau-Q1-78x"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMz-12-Jy6" userLabel="Normal Text View">
+                                                <rect key="frame" x="0.0" y="264" width="390" height="114"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bT-vB-zaw" customClass="CommonTextView" customModule="customLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="18" width="354" height="96"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="96" id="7nU-mv-sAw"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="x 버튼"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="9bT-vB-zaw" secondAttribute="bottom" id="T0W-cz-b3V"/>
+                                                    <constraint firstItem="9bT-vB-zaw" firstAttribute="top" secondItem="TMz-12-Jy6" secondAttribute="top" constant="18" id="nI5-2U-y11"/>
+                                                    <constraint firstItem="9bT-vB-zaw" firstAttribute="leading" secondItem="TMz-12-Jy6" secondAttribute="leading" constant="18" id="uK4-bP-4ox"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9bT-vB-zaw" secondAttribute="trailing" constant="18" id="ycl-VY-M15"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlG-AW-v84" userLabel="Count Text View">
+                                                <rect key="frame" x="0.0" y="378" width="390" height="114"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKN-bX-xp3" customClass="CommonTextView" customModule="customLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="18" y="18" width="354" height="96"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="96" id="Znu-Be-LdG"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="x 버튼, 숫자카운트"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="textMaxCount">
+                                                                <integer key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="wKN-bX-xp3" secondAttribute="trailing" constant="18" id="ITs-xe-cJU"/>
+                                                    <constraint firstItem="wKN-bX-xp3" firstAttribute="top" secondItem="YlG-AW-v84" secondAttribute="top" constant="18" id="LXA-b5-KYX"/>
+                                                    <constraint firstItem="wKN-bX-xp3" firstAttribute="leading" secondItem="YlG-AW-v84" secondAttribute="leading" constant="18" id="bd9-RW-GyQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wKN-bX-xp3" secondAttribute="bottom" id="hQy-m5-6d3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HGQ-gb-BDd" firstAttribute="width" secondItem="VFU-te-Cgx" secondAttribute="width" id="QQ8-cW-1ww"/>
+                                    <constraint firstItem="HGQ-gb-BDd" firstAttribute="trailing" secondItem="bsy-Dg-2hU" secondAttribute="trailing" id="fPw-cg-eo8"/>
+                                    <constraint firstItem="bsy-Dg-2hU" firstAttribute="top" secondItem="HGQ-gb-BDd" secondAttribute="top" id="s7X-LR-TT6"/>
+                                    <constraint firstItem="HGQ-gb-BDd" firstAttribute="leading" secondItem="bsy-Dg-2hU" secondAttribute="leading" id="w5M-5c-y83"/>
+                                    <constraint firstItem="HGQ-gb-BDd" firstAttribute="bottom" secondItem="bsy-Dg-2hU" secondAttribute="bottom" id="wBZ-5C-aWw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bsy-Dg-2hU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="VFU-te-Cgx"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dgE-cs-gvT" secondAttribute="bottom" id="3a4-7U-cRo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dgE-cs-gvT" secondAttribute="trailing" id="JiC-Jc-Iw3"/>
+                            <constraint firstItem="dgE-cs-gvT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VI4-OM-7is"/>
+                            <constraint firstItem="dgE-cs-gvT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wx6-Ix-zxn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tfAll" destination="8o1-zd-HM8" id="h8d-dZ-gSQ"/>
+                        <outlet property="tfSubmit" destination="pg5-PX-yFc" id="DSN-cK-AKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
